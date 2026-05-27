@@ -1,0 +1,47 @@
+h1{ margin: 0px; padding-left:20%; padding-top: 10%;
+    color:darkolivegreen; 
+    background-color: darkturquoise; font-style: normal;
+}
+
+table{margin-left: 5%; width: 630px; height: 260px; margin-top: 2%;}
+
+td{height: auto;}
+
+p{padding-top: 2%; margin-top: 0; margin-bottom: 0;}
+
+html{padding: 0; margin: 0;}
+
+body{padding: 0; margin: 0; background-color: azure; 
+    padding-bottom: 0; margin-bottom: 0;}
+
+div{margin: 0px; padding: 0em;}
+
+footer{background-color: darkgrey; height: 120px; margin-bottom: 0;}
+
+
+
+#start{background-color: aquamarine; height: 20%; 
+    padding: bottom 1px;}
+
+#splash{padding-left: 65%;}
+
+#mainbar{ background-color:turquoise; 
+        margin-left: 1%; margin-right: 1%; 
+        margin-top: 1%; margin-bottom: 1%;
+        border:solid; width: max-content; height: auto; 
+        align:center; vertical-align: center;
+        
+    }
+
+#projects{
+    background-color: cadetblue;
+    padding-bottom: 4%; margin-bottom: 0;}
+
+#blog{background-color: darkcyan;
+    padding-bottom: 4%; margin-bottom: 1%; margin-top: 0;}
+
+#ominousbucket{height: 160px; align-content:center; vertical-align: middle;}
+
+
+#seal{ align-content: right; margin-top: 4%; margin-left: 90%;
+         height:90px; width:90px;}
