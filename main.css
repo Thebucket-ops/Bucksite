@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+
+
 h1{ margin: 0px; padding-left:20%; padding-top: 10%;
     color:darkolivegreen; 
     background-color: darkturquoise; font-style: normal;
@@ -22,7 +27,9 @@ body{padding: 0; margin: 0; background-color: azure;
 
 div{margin: 0px; padding: 0em;}
 
-footer{background-color: darkgrey; height: 120px; margin-bottom: 0;}
+footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
+    display: flow-root;
+}
 
 
 
@@ -46,8 +53,17 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;}
 #blog{background-color: darkcyan;
     padding-bottom: 4%; margin-bottom: 1%; margin-top: 0;}
 
+#bgimage1{
+    position: fixed;
+    right: 0;
+    width: 100px;
+    height: 200px;
+    background-color: chocolate;
+    vertical-align: sub;
+}
+
 #ominousbucket{height: 160px; align-content:center; vertical-align: middle;}
 
 
-#seal{ align-content: right; margin-top: 4%; margin-left: 90%;
+#seal{ float: right; vertical-align: bottom;
          height:90px; width:90px;}
