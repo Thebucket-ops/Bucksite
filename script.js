@@ -36,29 +36,49 @@
 //        dog falls off a cliff and dies so at least the mountain doesnt crumble
 
 
-//TODO link NEVER GIVE UP chinese guy whe splash text pops up
+//TODO link NEVER GIVE UP chinese guy whe splash text pops up <a href="https://youtu.be/tYzMYcUty6s?si=yoMmFTHR7PbMrvK4"></a>
 let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
-    "random splash texts my beloveds","larptime.","100% organic no OGM!",
+    "random splash texts my beloveds","100% organic no OGM!",
     "li mortacci.","daje.","running out of splash texts ideas very quikcly",
     "Banana.","NEVER GIVE UP","still too little splash texts",
     "go listen to Takanaka, hes a cool ass japanese guy!",
     "theres only 1 pacific rim film",
-    "insert splash text here",
-]
+    "insert splash text here","now with 300% more grammatical errors!","spdow",
+];
+
+//need 68 sealion texts
+//NB sealion texts show up starting from the 2nd one and show the first one at last bcs im bad at coding
+let sealioncaretext =[
+"you gave the sea lion belly rubs, he's enthusiastic about it","you clicked a sea lion, he happy :3", "the sea lion really likes you"
+
+];
+
 
 document.getElementById("splash").textContent=splashtext[Math.floor(Math.random()*splashtext.length)];
 //ricordate de differenziare in base alla pagina in cui si è (progetti o main)
+let sealionclicks=0;
+
+
 
 document.getElementById("seal").onclick = function(){
+  sealionclicks+=1;
+  if(sealionclicks==68){
+    window.alert("and here the sealion video will start, or spdow")
+  }else{
+  window.alert(sealioncaretext[(sealionclicks%sealioncaretext.length)])
+  console.log(sealionclicks);
+  }
 
-window.alert('you clicked a sea lion, he happy :3')
 
-}
+
+  //NB THIS DOESNT WORK, FIX.
   let audioPlayer = document.getElementById('sealionid');
   function play(){
     audioPlayer.load(); 
     audioPlayer.play();
   }
+}
+
 
 //TODO make so that when clicked shows a gif of the sea lion dancing cuz hes cute
 

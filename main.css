@@ -7,7 +7,7 @@ pre{
     font-family: monospace;
     font-size: larger;
     margin: 0px; padding-left:3%; padding-top: 2%;
-    color:darkolivegreen; 
+    color:rgb(255, 104, 17); 
     font-style: normal;
     animation-name: slideLeft;
     animation-duration: 3s;
@@ -77,20 +77,55 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 
 
-#mainbar{ background-color:turquoise; 
-        margin-left: 1%; margin-right: 1%; 
-        margin-top: 1%; margin-bottom: 1%;
-        border:solid; width: max-content; height: auto; 
-       vertical-align: center;
-        
-    }
+#mainbar{ 
+    background-color:turquoise; 
+    margin-left: 1%; margin-right: 1%; 
+    margin-top: 1%; margin-bottom: 1%;
+    border:solid; width: max-content; height: auto; 
+    vertical-align: center;
+}
 
 #projects{
-    background-color: cadetblue;
-    padding-bottom: 4%; margin-bottom: 0;}
+    background-color: rgba(255, 255, 255, 0);
+    padding-bottom: 4%; margin-bottom: 0;
+    flex: content;
+}
 
-#blog{background-color: darkcyan;
-    padding-bottom: 4%; margin-bottom: 1%; margin-top: 0;}
+#projectsel{
+    display: inline-block;
+    background-color: #2f00b1;
+    border: solid black;
+    height: 25vh;
+    width: 18vw;
+    margin: 3vw;
+    margin-bottom: 0;
+    margin-top: 1vh;
+    border-radius: 5%;
+}
+#projectsel:hover{
+    box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
+}
+
+#blog{background-color: rgba(255, 255, 255, 0);
+    padding-bottom: 4%; margin-bottom: 1%; margin-top: 0;
+    flex:content;
+}
+
+#blogel{
+    display: inline-block;
+    background-color: #16d646;
+    border: solid black;
+    height: 25vh;
+    width: 18vw;
+    margin: 3vw;
+    margin-bottom: 0;
+    margin-top: 1vh;
+    border-radius: 5%;
+}
+#blogel:hover{
+    box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
+}
+
 
 #bgimage1{
     position: fixed;
@@ -117,7 +152,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     position: relative;
   float: right; vertical-align: bottom;
   top: +30px;
-  left: +300px;
+  opacity: 0.001;
   z-index: 2;
 
 }
