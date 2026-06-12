@@ -20,7 +20,6 @@
 //.max .min trova min max tra set di elementi
 //.random numero random tra 0 e 1 abbastanza lungo nei decimale
 //Math.floor(Math.random()*num) numero tra num-1 e 0
-// man this sucks ass wdym only half an hour 
 
 //callback: when a function
 //function(name of other function to make after){
@@ -29,7 +28,7 @@
 
 //setTimeout(funct(){} delay in milliseconds 3000 for 3 secs) 
 
-//how to api:
+//how to api 101:
 //fetch{url,{options}}<- like a dog but goes on to find sites
 //       .then to tell it what to do
 //       .catch(error => console.error(error))-> in case the 
@@ -43,40 +42,39 @@ let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
     "Banana.","NEVER GIVE UP","still too little splash texts",
     "go listen to Takanaka, hes a cool ass japanese guy!",
     "theres only 1 pacific rim film",
-    "insert splash text here","now with 300% more grammatical errors!","spdow",
+    "insert splash text here","now with 300% more grammatical errors!","spdow","from Italy with fury"
 ];
 
 //need 68 sealion texts
 //NB sealion texts show up starting from the 2nd one and show the first one at last bcs im bad at coding
 let sealioncaretext =[
-"you gave the sea lion belly rubs, he's enthusiastic about it","you clicked a sea lion, he happy :3", "the sea lion really likes you"
+"this is [insert name here], hes a sea lion","the sea lion notices you",
+"you clicked a sea lion, he happy :3", "you gave the sea lion belly rubs, he's enthusiastic about it","the sea lion really likes you"
 
 ];
 
 
 document.getElementById("splash").textContent=splashtext[Math.floor(Math.random()*splashtext.length)];
 //ricordate de differenziare in base alla pagina in cui si è (progetti o main)
-let sealionclicks=0;
 
+let sealionclicks=0;
+document.getElementById("tooltiptext").textContent=sealioncaretext[(sealionclicks%sealioncaretext.length)];
 
 
 document.getElementById("seal").onclick = function(){
   sealionclicks+=1;
-  if(sealionclicks==68){
-    window.alert("and here the sealion video will start, or spdow")
-  }else{
-  window.alert(sealioncaretext[(sealionclicks%sealioncaretext.length)])
-  console.log(sealionclicks);
-  }
+    
+    document.getElementById('sealionid').play();
+  //TODO CHANGE TO TEXT SHOWING UP ON TOP
+  
+    if(sealionclicks==68){
+    document.getElementById("tooltiptext").textContent="spdow";
+    }else{
+    document.getElementById("tooltiptext").textContent=sealioncaretext[(sealionclicks%sealioncaretext.length)];
+    console.log(sealionclicks);
+    }
 
-
-
-  //NB THIS DOESNT WORK, FIX.
-  let audioPlayer = document.getElementById('sealionid');
-  function play(){
-    audioPlayer.load(); 
-    audioPlayer.play();
-  }
+  //YAY IT WORKSS
 }
 
 

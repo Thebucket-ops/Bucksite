@@ -2,16 +2,90 @@
     box-sizing: border-box;
 }
 
+#start{background-color: aquamarine; height: 20%;
+    padding: bottom 1px;
+    flex: content;
+    background-image: url(images/buck&buck/buck&buck.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
 
 pre{ 
     font-family: monospace;
     font-size: larger;
-    margin: 0px; padding-left:3%; padding-top: 2%;
+    margin: 0px; padding-left:3%; padding-top: 1.5%; padding-bottom: 2%;
     color:rgb(255, 104, 17); 
     font-style: normal;
-    animation-name: slideLeft;
     animation-duration: 3s;
+    display: inline-block;
 }
+
+#buck{
+    position: relative;
+    height: 20%;
+    padding-left: 55%;
+    display: inline;
+}
+
+.tilt {
+    -ms-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+#splash{
+    
+    position: relative;
+    left: 42.5%;
+    bottom: 45px;
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+    color: rgb(99, 66, 187);
+    text-shadow:0 0 3px #ebeb02;
+}
+.splashpop {
+    animation: pop 0.58s infinite;
+    -webkit-animation: pop 0.58s infinite;
+}
+
+@keyframes pop {
+    from {
+        transform:scale(0.99)
+    }
+    50% {
+        transform:scale(1)
+    }
+    to {
+        transform:scale(0.99)
+    }
+}
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform:scale(0.99)
+    }
+    50% {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(0.99)
+    }
+}
+@-moz-keyframes pop{
+    from {
+        -webkit-transform:scale(0.99)
+    }
+    50% {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(0.99)
+    }
+}
+
+
+
+
 table{
     border: none;
     margin-left: 5%; width: 630px; height: 260px; margin-top: 2%;}
@@ -19,14 +93,25 @@ table{
 td{ background-color: hsla(192, 100%, 71%, 0.445);
     height: auto; border-radius: 12px;}
 
-p{padding-top: 2%; margin-top: 0; margin-bottom: 0;
+p{padding-top: 1%; margin-top: 0; margin-bottom: 0;
 font-family: monospace;
 }
 
 html{padding: 0; margin: 0;}
 
-body{padding: 0; margin: 0; background-color: azure; 
-    padding-bottom: 0; margin-bottom: 0;}
+body{padding: 0; margin: 0; 
+    
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;    /*here put 2nd imageS*/
+    background-position-x: right;
+    backface-visibility: visible;
+
+    padding-bottom: 0; 
+    margin-bottom: 0;
+
+
+}
 
 div{margin: 0px; padding: 0em;}
 
@@ -36,42 +121,9 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 
 
-#start{background-color: aquamarine; height: 20%;
-    padding: bottom 1px;}
 
 
 
-#splash{padding-left: 50%;
-    font-size: larger;
-    color: rgb(99, 66, 187);
-}
-.splashpop {
-    animation: pop 0.8s infinite;
-    -webkit-animation: pop 0.8s infinite;
-}
-
-@keyframes pop {
-    from {
-        transform:scale(0.98)
-    }
-    50% {
-        transform:scale(1)
-    }
-    to {
-        transform:scale(0.98)
-    }
-}
-@-webkit-keyframes pop {
-    from {
-        -webkit-transform:scale(0.95)
-    }
-    50% {
-        -webkit-transform:scale(1)
-    }
-    to {
-        -webkit-transform:scale(0.95)
-    }
-}
 
 
 
@@ -104,7 +156,13 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 }
 #projectsel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
+
+    animation: hoverbig 0.3s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
+
 
 #blog{background-color: rgba(255, 255, 255, 0);
     padding-bottom: 4%; margin-bottom: 1%; margin-top: 0;
@@ -124,40 +182,82 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 }
 #blogel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
+
+    animation: hoverbig 0.3s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
 
-
-#bgimage1{
-    position: fixed;
-    right: 0;
-    width: 100px;
-    height: 200px;
-    background-color: chocolate;
-    vertical-align: sub;
+@keyframes hoverbig {
+    from {
+        transform:scale(1)
+    }
+    to {
+        transform:scale(1.05)
+       
+    }
 }
+@-webkit-keyframes hoverbig {
+    from {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(1.05)
+    }
+}
+@-moz-keyframes hoverbig{
+    from {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(1.05)
+    }
+}
+
 
 #ominousbucket{height: 160px; align-content:center; vertical-align: middle;}
 
 
 #seal{ float: right; vertical-align: bottom;
+         position: relative;
          height:90px; width:90px;
-         
+         cursor: grab;
         }
 #seal:hover{
     border-color: #2f00b1;
     box-shadow: 0 0 90px rgba(251, 255, 0, 0.6);
-}
-#sealionid{
-    height: 90px;
-    position: relative;
-  float: right; vertical-align: bottom;
-  top: +30px;
-  opacity: 0.001;
-  z-index: 2;
-
+    
 }
 
 
-@keyframes slideLeft{
-from{transform: translateX(300%)}
+
+
+/* TODO fix this not showing up*/
+#tooltiptext {
+  border: #161515 solid 1px;
+  font-family: monospace;
+  background-color: rgb(248, 248, 248);
+  color: #161515;
+  display: inline;
+  float: right; vertical-align: middle;
+  position: absolute;
+
+  text-align: center;
+  visibility: visible; /* qua la visibilità dell'oggetto*/
+  opacity: 1;
+  transition: opacity 2s;
+  width: 130px;
+  padding: 5px 0;
+  border-radius: 6px;
+  
+  z-index: 1;
+  bottom: -37%;
+  left: 83.5%;
 }
+#seal:hover #tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
