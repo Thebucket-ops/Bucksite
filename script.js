@@ -33,6 +33,7 @@
 //       .then to tell it what to do
 //       .catch(error => console.error(error))-> in case the 
 //        dog falls off a cliff and dies so at least the mountain doesnt crumble
+// JSON.parse(filename)[eventual array pos].variable
 
 
 //TODO link NEVER GIVE UP chinese guy whe splash text pops up <a href="https://youtu.be/tYzMYcUty6s?si=yoMmFTHR7PbMrvK4"></a>
@@ -90,3 +91,14 @@ window.alert('sorry, this is still a work in progress -Buck')
 //changes content that has a specific id (can do dat with classes too) or use ${}
 //.onclick starts function as 
 //user interface how to set it up idk
+
+
+
+
+
+
+//// API ////
+var url ="https://api.github.com/users/Thebucket-ops/repos?perPage=100"
+$.get(url, function(data){
+  console.log(data);
+})
