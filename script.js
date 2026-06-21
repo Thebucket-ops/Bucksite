@@ -96,9 +96,31 @@ window.alert('sorry, this is still a work in progress -Buck')
 
 
 
-
+// //var repoName=[sortedRepos.length];
+//   var repoDescription=[sortedRepos.length];
+//   var repoLink=[sortedRepos.length];
+//   var repoStars=[sortedRepos.length];
+//   for(let i =0; i < sortedRepos.length;i++){
+//   repoName[i] = sortedRepos[i].name;
+//   repoDescription[i] = sortedRepos[i].description;
+//   repoLink[i] = sortedRepos[i].html_url;
+//   repoStars[i] = sortedRepos[i].stargazers_count;
+//   }
 //// API ////
-var url ="https://api.github.com/users/Thebucket-ops/repos?perPage=100"
-$.get(url, function(data){
-  console.log(data);
+var url = "https://api.github.com/users/Thebucket-ops/repos?per_page=100";
+
+$.get(url, function(data) {
+  var sortedRepos = data.sort((a,b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count));
+  
+  let repoName= sortedRepos[0].name;
+  let repoDescription= sortedRepos[0].description;
+  let repoLink= sortedRepos[0].html_url;
+  let repoStars = sortedRepos[0].stargazers_count;
+  
+  $(document).ready(function() {
+    $(".repoLink").attr('href', repoLink);
+    $("#repoTitle").html(repoName);
+    $("#repoStars").html(repoStars);
+    $("#repoDescription").html(repoDescription);
+  })
 })

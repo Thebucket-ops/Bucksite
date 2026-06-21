@@ -143,9 +143,9 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     flex: content;
 }
 
-#projectsel{
+.projectsel{
     display: inline-block;
-    background-color: #2f00b1;
+    background-color: #009cb1;
     border: solid black;
     height: 25vh;
     width: 18vw;
@@ -154,7 +154,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     margin-top: 1vh;
     border-radius: 5%;
 }
-#projectsel:hover{
+.projectsel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
 
     animation: hoverbig 0.3s;
@@ -162,6 +162,44 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     animation-direction: alternate;
     animation-fill-mode: forwards;
 }
+#projContent{
+    background-color: #161515;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    padding-bottom: 5%;
+}
+
+#repoTitle{
+    margin: 0;
+    
+    padding-left: 5%;
+    padding-top: 5%;
+    font-family: monospace;
+    font-size:x-large;
+    font-weight: bold;
+    display: inline-block;
+}
+.projDesc{
+    margin: 0;
+    
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: monospace;
+    display: inline;
+
+}
+.projImg{
+    margin: 0;
+    padding: 0;
+    
+    height:55%;
+    width:100% ;
+    display: flow-root;
+    vertical-align: bottom;
+    
+}
+
 
 
 #blog{background-color: rgba(255, 255, 255, 0);
@@ -169,7 +207,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     flex:content;
 }
 
-#blogel{
+.blogel{
     display: inline-block;
     background-color: #16d646;
     border: solid black;
@@ -180,7 +218,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     margin-top: 1vh;
     border-radius: 5%;
 }
-#blogel:hover{
+.blogel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
 
     animation: hoverbig 0.3s;
