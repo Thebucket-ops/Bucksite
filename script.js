@@ -49,8 +49,8 @@ let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
 //need 68 sealion texts
 //NB sealion texts show up starting from the 2nd one and show the first one at last bcs im bad at coding
 let sealioncaretext =[
-"this is [insert name here], hes a sea lion","the sea lion notices you",
-"you clicked a sea lion, he happy :3", "you gave the sea lion belly rubs, he's enthusiastic about it","the sea lion really likes you"
+"this is Fred, hes a sea lion","Fred notices you",
+"you clicked Fred, hes happy :3", "you gave the Fred belly rubs, he's enthusiastic about it","Fred really likes you"
 
 ];
 
@@ -81,9 +81,7 @@ document.getElementById("seal").onclick = function(){
 
 //TODO make so that when clicked shows a gif of the sea lion dancing cuz hes cute
 
-document.getElementById("ominousbucket").onclick = function(){
-window.alert('sorry, this is still a work in progress -Buck')
-}
+
 
 
 //REMEMBER remove this when new project is ready ;)
@@ -91,7 +89,6 @@ window.alert('sorry, this is still a work in progress -Buck')
 //changes content that has a specific id (can do dat with classes too) or use ${}
 //.onclick starts function as 
 //user interface how to set it up idk
-
 
 
 
@@ -106,21 +103,35 @@ window.alert('sorry, this is still a work in progress -Buck')
 //   repoLink[i] = sortedRepos[i].html_url;
 //   repoStars[i] = sortedRepos[i].stargazers_count;
 //   }
+
 //// API ////
 var url = "https://api.github.com/users/Thebucket-ops/repos?per_page=100";
 
 $.get(url, function(data) {
   var sortedRepos = data.sort((a,b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count));
   
-  let repoName= sortedRepos[0].name;
-  let repoDescription= sortedRepos[0].description;
-  let repoLink= sortedRepos[0].html_url;
-  let repoStars = sortedRepos[0].stargazers_count;
-  
+
+
+  let repoName= [];
+  let repoDescription= [];
+  let repoLink= [];
+  let repoStars = [];
+
+  for(let i= 0; i<sortedRepos.length;i++){
+      repoName[i]= sortedRepos[i].name;
+      repoDescription[i]= sortedRepos[i].description;
+      repoLink[i]= sortedRepos[i].html_url;
+      repoStars[i] = sortedRepos[i].stargazers_count;
+      console.log(repoName);
+    }
+
   $(document).ready(function() {
-    $(".repoLink").attr('href', repoLink);
-    $("#repoTitle").html(repoName);
-    $("#repoStars").html(repoStars);
-    $("#repoDescription").html(repoDescription);
+    
+    for (let i =0;i<4;i++){
+    $(".repoLink"+i).attr('href', repoLink[i]);
+    $("#repoTitle"+i).html(repoName[i]);
+    $("#repoStars"+i).html(repoStars[i]);
+    $("#repoDescription"+i).html(repoDescription[i]);
+    }
   })
 })
