@@ -171,7 +171,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
 
     animation: hoverbig 0.3s;
-    animation: tilte 0.3s;
+    
     animation-timing-function: ease-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -271,55 +271,32 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 @keyframes hoverbig {
     from {
-        transform:scale(1)
+        transform:scale(1), rotate(0)
     }
     to {
-        transform:scale(1.05)
+        transform:scale(1.05), rotate(5deg)
        
     }
 }
 @-webkit-keyframes hoverbig {
     from {
-        -webkit-transform:scale(1)
+        -webkit-transform:scale(1), rotate(0)
     }
     to {
-        -webkit-transform:scale(1.05)
+        -webkit-transform:scale(1.05), rotate(5deg)
     }
 }
 @-moz-keyframes hoverbig{
     from {
-        -webkit-transform:scale(1)
+        -webkit-transform:scale(1), rotate(0)
     }
     to {
-        -webkit-transform:scale(1.05)
+        -webkit-transform:scale(1.05), rotate(5deg)
     }
 }
 
-@keyframes tilte {
-    from {
-        transform:rotate(0)
-    }
-    to {
-        transform:rotate(5deg)
-       
-   }               /*  make it random */
-}
-@-webkit-keyframes tilte {
-    from {
-        -webkit-transform:rotate(0)
-    }
-    to {
-        -webkit-transform:rotate(5deg)
-    }
-}
-@-moz-keyframes tilte{
-    from {
-        -ms-transform:rotate(0) 
-    to {
-        -ms-transform:rotate(5deg)
-    }
-} 
-}
+
+
 
 #ominousbucket{ 
     

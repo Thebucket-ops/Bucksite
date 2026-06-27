@@ -3,14 +3,14 @@ export class Player {
         this.game=game;
         this.width=60;
         this.height=120;
-        this.x=this.game.width/2-this.width;
+        this.x=this.game.width/6-this.width;
         this.y=this.game.height/2-this.height;
         this.image =document.getElementById('player');
         this.speed=0;
         this.vspeed=0;
         this.maxSpeed=5;
         this.gravity=1;
-        this.jump=10;
+        this.jump=15;
         this.terminalVelocity=-20;
     }
     update(key_up, key_down, key_left, key_right,
@@ -26,9 +26,11 @@ export class Player {
         if(this.vspeed>this.terminalVelocity){
         this.vspeed+=this.gravity
         
-        //TODO MAKE AN IF THAT WHEN THE DISTANCE BETWEEN GROUND PLY IS SMALLER THAN VSPEED THEN VSPEED IS THE DISTANCE
-        //also fix that when player goes to high it never comes back
-        // if(this.vspeed>(-this.game.height-this.y))
+        
+        
+        if(this.vspeed>(this.game.height-(this.y+this.height))){
+            this.vspeed=(this.game.height-(this.y+this.height));    //avoids the player from clipping in ground
+        }
 
         if (this.y>this.game.height-this.height)this.vspeed=0;
         }
