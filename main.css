@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 #start{background-color: aquamarine; height: 20%;
@@ -9,6 +10,7 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+    overflow-x: hidden;
 }
 
 pre{ 
@@ -21,12 +23,7 @@ pre{
     display: inline-block;
 }
 
-#buck{
-    position: relative;
-    height: 20%;
-    padding-left: 55%;
-    display: inline;
-}
+
 
 .tilt {
     -ms-transform: rotate(-15deg);
@@ -109,7 +106,7 @@ body{padding: 0; margin: 0;
 
     padding-bottom: 0; 
     margin-bottom: 0;
-
+    overflow-x: hidden;
 
 }
 
@@ -140,8 +137,8 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 #topproj{
     color: #4e4e08;
     font-size: x-large;
-    padding: 1%;
-    padding-bottom: 0.5%;
+    padding: 2%;
+    padding-bottom: 1%;
     margin: 0;
 } 
 
@@ -158,9 +155,9 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 .projectsel{
     display: inline-block;
-    background-color: #ffffff;
-    border: solid black;
-    height: 35vh;
+    background-color: #c6ff2b;
+    border: solid black 0.5px;
+    height: 38vh;
     width: 21vw;
     margin: 1vw;
     margin-bottom: 0;
@@ -177,30 +174,22 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     animation-fill-mode: forwards;
 }
 #projContent{
-    background-color: #0019fc;
 
+    
     padding-bottom: 5%;
 }
 
-#repoTitle{
-    margin:0;
-    
-    padding-left: 5%;
-    padding-top: 5%;
-    font-family: monospace;
-    font-size:x-large;
-    font-weight: bold;
-    display: inline-block;
-}
+
 .projDesc{
     margin: 0;
-    
+    color: #000;
     padding-left: 3.5%;
     padding-top: 5%;
     padding-bottom: 5%;
     font-family: monospace;
     display: inline;
-    text-decoration: none;
+    text-decoration: none!important;
+    overflow: hidden;
 
 }
 .projImg{
@@ -213,15 +202,35 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     vertical-align: bottom;
     
 }
+.pen{
+    margin:0;
+    padding-top: 1vh;
+
+    font-family: monospace;
+    font-size: x-large;
+    
+    display: inline-block;
+    overflow-x: hidden;
+    color: #000;
+    text-decoration: none;
+}
 
 
 #moreproj{
     
     position: absolute;
-    
+    font-size: x-large;
+    overflow: visible!important;
 }
 #moreprojname{
+    color: #000;
+    
+    display: inline-block;
+    position: relative;
+    left: -4.5vw;
+    top: 15vh;
     rotate: -90deg;
+    overflow:visible!important;
 }
 
 
@@ -244,9 +253,14 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 
 
-#blog{background-color: rgba(255, 255, 255, 0);
-    padding-bottom: 1%; margin-bottom: 1%; margin-top: 0;
+#blog{
+    background-color: rgba(255, 255, 255, 0);
+    
+     margin-top: 0;
+    height: 40vh;
     flex:content;
+    background-image: url(images/buck&buck/buck&buck.png);    /* add desolate img */
+    background-repeat: no-repeat;
 }
 
 .blogel{
@@ -272,6 +286,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 @keyframes hoverbig {
     from {
         transform:scale(1), rotate(0)
+        
     }
     to {
         transform:scale(1.05), rotate(5deg)
@@ -303,8 +318,40 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     align-content:center; vertical-align: middle;
     padding: 0;
     margin: 0;
-    border: #161515 2px solid;
+    border-top: #000 2px solid;
 }
+
+
+#socials{
+
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-top: 12vh;
+    margin-left: 1vh;
+}
+.icon{
+    
+    display: inline;
+    margin: 0.5vh;
+}
+#git:hover{
+    fill: purple;
+}
+#slack:hover{
+    fill: gold;
+}
+#yt:hover{
+    fill:red;
+}
+
+
+
+
+
+
+
+
 
 
 #seal{ float: right; vertical-align: bottom;
@@ -340,8 +387,8 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
   border-radius: 6px;
   
   z-index: 1;
-  bottom: -57%;
-  left: 83.5%;
+  bottom: -80vh;
+  left: 83.5vw;
 }
 #seal:hover #tooltiptext {
   visibility: visible;
