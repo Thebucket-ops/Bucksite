@@ -125,6 +125,8 @@ $.get(url, function(data) {
       console.log(repoName);
     }
 
+
+    
   $(document).ready(function() {
     
     for (let i =0;i<4;i++){
@@ -134,4 +136,5 @@ $.get(url, function(data) {
     $("#repoDescription"+i).html(repoDescription[i]);
     }
   })
+
 })
