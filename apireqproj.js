@@ -26,38 +26,8 @@ $.get(url, function(data) {
       var a = document.createElement("a");
       a.setAttribute("class", "repoLink"+i);
       a.setAttribute("href", repoLink[i]);
+      a.innerHTML='<div class="projectsel"><div id="projContent"><pre id="repoTitle'+i+'" class="pen"></pre></br><pre id="repoDescription'+i+'" class="projDesc"></pre></div><img class="projImg'+i+'" src="images/buck&buck/buck&buck.png" alt="proj img"></div>';
       document.getElementById("main").appendChild(a);
-
-      var div = document.createElement("div");
-      div.setAttribute("class", "projectsel");
-      div.innerHTML= 
-                                                                //make so that the content is inside this and then is appended
-
-
-
-      document.getElementById("repoLink"+i).appendChild(div);
-      
-      var content = document.createElement("div");
-      content.setAttribute("id", "projContent");
-      div.appendChild(content); //
-
-      var title = document.createElement("pre");
-      title.setAttribute("id", "repoTitle"+i);
-      title.setAttribute("class", "pen");
-      title.innerHTML = repoName[i];
-      content.appendChild(title);
-
-      content.appendChild(document.createElement("br"));
-
-      var desc= document.createElement("pre");
-      desc.setAttribute("id", "repoDescription"+i);
-      desc.setAttribute("class", "projDesc");
-      desc.innerHTML = repoDescription[i];
-      content.appendChild(desc);
-
-      var img = document.createElement("img");
-      img.setAttribute("class", "projImg"+i);
-      div.appendChild(img);
 
     }
 
