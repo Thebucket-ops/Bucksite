@@ -409,4 +409,5 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 /*PROJECT PAGE RELATIVE CSS*/
 #projectsect{
     padding: 4vh;
+    display: flexbox;
 }

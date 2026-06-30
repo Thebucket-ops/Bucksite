@@ -26,9 +26,14 @@
     <!--insert a label to order based on time and things like that-->
 
 
-    <button>Load Projects</button> 
-    <label for="sort">Sort by:</label>  
+    <label for="order">Order by:</label>
+    <select name="order" id="order">
 
+      <option value="stars">stars</option>
+      <option value="updated">recently updated</option>
+      <option value="created">recently created</option>
+
+    </select>
    <div id="main">
 
    </div>
@@ -46,7 +51,7 @@
   
 
 </footer>
-<!--NOTE: JAVASCRIPT IS SAME AS THE ONE ONE MAIN-->
-<script src="script.js"></script>
+<!--NOTE: JAVASCRIPT IS NO LONGER THE SAME AS THE ONE ON MAIN-->
+
 <script src="apireqproj.js"></script>
 </body>

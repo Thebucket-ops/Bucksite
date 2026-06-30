@@ -1,8 +1,68 @@
+let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
+    "random splash texts my beloveds","100% organic no OGM!",
+    "li mortacci.","daje.","running out of splash texts ideas very quikcly",
+    "Banana.","NEVER GIVE UP","still too little splash texts",
+    "go listen to Takanaka, hes a cool ass japanese guy!",
+    "theres only 1 pacific rim film",
+    "insert splash text here","now with 300% more grammatical errors!","spdow","from Italy with fury"
+];
+
+//need 68 sealion texts
+//NB sealion texts show up starting from the 2nd one and show the first one at last bcs im bad at coding
+let sealioncaretext =[
+"this is Fred, hes a sea lion","Fred notices you",
+"you clicked Fred, hes happy :3", "you gave the Fred belly rubs, he's enthusiastic about it","Fred really likes you"
+
+];
+
+
+document.getElementById("splash").textContent=splashtext[Math.floor(Math.random()*splashtext.length)];
+//ricordate de differenziare in base alla pagina in cui si è (progetti o main)
+
+let sealionclicks=0;
+document.getElementById("tooltiptext").textContent=sealioncaretext[(sealionclicks%sealioncaretext.length)];
+
+
+document.getElementById("seal").onclick = function(){
+  sealionclicks+=1;
+    
+    document.getElementById('sealionid').play();
+  //TODO CHANGE TO TEXT SHOWING UP ON TOP
+  
+    if(sealionclicks==68){
+    document.getElementById("tooltiptext").textContent="spdow";
+    }else{
+    document.getElementById("tooltiptext").textContent=sealioncaretext[(sealionclicks%sealioncaretext.length)];
+    console.log(sealionclicks);
+    }
+
+  //YAY IT WORKSS
+}
+
+
+
+
+
+
+
 var url = "https://api.github.com/users/Thebucket-ops/repos?per_page=100";
 
+document.querySelector("select").addEventListener('change',$.get)
+
 $.get(url, function(data) {
-  var sortedRepos = data.sort((a,b) => parseFloat(b.stargazers_count) - parseFloat(a.stargazers_count));
-  
+  console.log(document.querySelector("select").value);
+
+  var sortType= 'stargazers_count';
+  if (document.querySelector("select").value=='stars'){
+   sortType='stargazers_count';
+  }else if (document.querySelector("select").value=='updated'){
+   sortType='updated_at';
+  }else if (document.querySelector("select").value=='created'){
+    sortType='created_at';
+  }
+
+  var sortedRepos = data.sort((a,b) => parseFloat(b.sortType) - parseFloat(a.sortType));
+  console.log(sortedRepos);
 
 
   let repoName= [];
