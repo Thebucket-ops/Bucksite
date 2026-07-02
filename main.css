@@ -3,7 +3,7 @@
     
 }
 
-#start{background-color: aquamarine; height: 20%;
+#start{background-color: aquamarine; height: 24vh;
     padding: bottom 1px;
     flex: content;
     background-image: url(images/buck&buck/buck&buck.png);
@@ -15,7 +15,7 @@
 
 pre{ 
     font-family: monospace;
-    font-size: larger;
+    font-size: 2.5vh;
     margin: 0px; padding-left:3%; padding-top: 1.5%; padding-bottom: 2%;
     color:rgb(255, 104, 17); 
     font-style: normal;
@@ -33,11 +33,11 @@ pre{
 #splash{
     
     position: relative;
-    left: 42.5%;
-    bottom: 45px;
+    left: 42.5vw;
+    bottom: 7vh;
     padding: 0;
     margin: 0;
-    font-size: larger;
+    font-size: 2.7vh;
     color: rgb(99, 66, 187);
     text-shadow:0 0 3px #ebeb02;
 }
@@ -136,7 +136,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 #topproj{
     color: #4e4e08;
-    font-size: x-large;
+    font-size: 4vh;
     padding: 2%;
     padding-bottom: 1%;
     margin: 0;
@@ -167,11 +167,11 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 .projectsel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
 
-    animation: hoverbig 0.3s;
-    
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
+    animation-name: hoverbig , rotation;
+    animation-duration: 0.3s, 0.3s;
+    animation-timing-function: ease-out, ease-out;
+    animation-direction: alternate, alternate;
+    animation-fill-mode: forwards, forwards;
 }
 #projContent{
 
@@ -184,7 +184,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     margin: 0;
     color: #000;
     padding-left: 3.5%;
-    padding-top: 5%;
+    padding-top: 5%;    /*note that this is still in percent */
     padding-bottom: 5%;
     font-family: monospace;
     display: inline;
@@ -192,11 +192,11 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     overflow: hidden;
 
 }
-.projImg{
+#imageProj{
     margin: 0;
     padding: 0;
+    padding-top: 2vh;
     
-    height:55%;
     width:100% ;
     display: flow-root;
     vertical-align: bottom;
@@ -207,7 +207,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     padding-top: 1vh;
 
     font-family: monospace;
-    font-size: x-large;
+    font-size: 3vh;
     
     display: inline-block;
     overflow-x: hidden;
@@ -219,12 +219,12 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 #moreproj{
     
     position: absolute;
-    font-size: x-large;
+    
     overflow: visible!important;
 }
 #moreprojname{
     color: #000;
-    
+    font-size: 3.5vh;
     display: inline-block;
     position: relative;
     left: -4.5vw;
@@ -256,7 +256,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 #blog{
     background-color: rgba(255, 255, 255, 0);
     
-     margin-top: 0;
+    margin-top: 0;
     height: 40vh;
     flex:content;
     background-image: url(images/buck&buck/buck&buck.png);    /* add desolate img */
@@ -277,50 +277,79 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 .blogel:hover{
     box-shadow: 0 0 90px rgba(21, 150, 255, 0.6);
 
-    animation: hoverbig 0.3s;
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
+    animation-name: hoverbig, rotation;
+    animation-duration: 0.3s, 0.3s;
+    animation-timing-function: ease-out, ease-out;
+    animation-direction: alternate, alternate;
+    animation-fill-mode: forwards, forwards;
 }
+
+
 
 @keyframes hoverbig {
     from {
-        transform:scale(1), rotate(0)
-        
+        transform:scale(1)
     }
     to {
-        transform:scale(1.05), rotate(5deg)
-       
+        transform:scale(1.05)
     }
 }
-@-webkit-keyframes hoverbig {
+@-webkit-keyframes hoverbig{
     from {
-        -webkit-transform:scale(1), rotate(0)
+        -webkit-transform:scale(1)
     }
     to {
-        -webkit-transform:scale(1.05), rotate(5deg)
+        -webkit-transform:scale(1.05)
     }
 }
 @-moz-keyframes hoverbig{
     from {
-        -webkit-transform:scale(1), rotate(0)
+        -moz-transform:scale(1)
     }
     to {
-        -webkit-transform:scale(1.05), rotate(5deg)
+        -moz-transform:scale(1.05)
+    }
+}
+
+@keyframes rotation{
+    from {
+        transform:rotate(0)
+    }
+    to {
+        transform:rotate(5deg)
+    }
+}
+@-webkit-keyframes rotation{
+    from {
+        -webkit-transform:rotate(0)
+    }
+    to {
+        -webkit-transform:rotate(5deg)
+    }
+}
+@-moz-keyframes rotation{
+    from {
+        -moz-transform:rotate(0)
+    }
+    to {
+        -moz-transform:rotate(5deg)
     }
 }
 
 
 
-
-#ominousbucket{ 
-    
+#ominousbucket{  
     align-content:center; vertical-align: middle;
     padding: 0;
     margin: 0;
     border-top: #000 2px solid;
 }
 
+
+
+#footer{
+    display: flex;
+}
 
 #socials{
 
@@ -352,7 +381,11 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 
 
-
+#sealContainer{
+    display: flex;
+    float: right;
+    top: 7vh;
+}
 
 #seal{ float: right; vertical-align: bottom;
          position: relative;
@@ -386,9 +419,8 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
   padding: 5px 0;
   border-radius: 6px;
   
+  right: 7vw;
   z-index: 1;
-  bottom: -80vh;
-  left: 83.5vw;
 }
 #seal:hover #tooltiptext {
   visibility: visible;
@@ -397,7 +429,6 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 
 .gameAssets{
     display: none;
-
 }
 
 /*TODO fix all broken positioning on elements*/ 

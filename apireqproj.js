@@ -8,15 +8,14 @@ let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
 ];
 
 //need 68 sealion texts
-//NB sealion texts show up starting from the 2nd one and show the first one at last bcs im bad at coding
-let sealioncaretext =[
+
+let sealioncaretext =[  
 "this is Fred, hes a sea lion","Fred notices you",
 "you clicked Fred, hes happy :3", "you gave the Fred belly rubs, he's enthusiastic about it","Fred really likes you"
-
 ];
 
 
-document.getElementById("splash").textContent=splashtext[Math.floor(Math.random()*splashtext.length)];
+document.getElementById("splash").innerHTML=splashtext[Math.floor(Math.random()*splashtext.length)];
 //ricordate de differenziare in base alla pagina in cui si è (progetti o main)
 
 let sealionclicks=0;
