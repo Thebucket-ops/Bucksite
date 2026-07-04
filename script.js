@@ -116,13 +116,15 @@ $.get(url, function(data) {
   let repoName= [];
   let repoDescription= [];
   let repoLink= [];
+  let repoImg=[];
   let repoStars = [];
 
   for(let i= 0; i<sortedRepos.length;i++){
       repoName[i]= sortedRepos[i].name;
       repoDescription[i]= sortedRepos[i].description;
       repoLink[i]= sortedRepos[i].html_url;
-      repoStars[i] = sortedRepos[i].stargazers_count;
+      repoStars[i] = sortedRepos[i].stargazers_count;       //NOTE TO CHANGE BELOW IF I CHANGE NAME
+      repoImg[i]="https://raw.githubusercontent.com/Thebucket-ops/"+repoName[i]+"/refs/heads/main/siteimage.png"
       console.log(repoName);
     }
 
@@ -135,7 +137,8 @@ $.get(url, function(data) {
     $("#repoTitle"+i).html(repoName[i]);
     $("#repoStars"+i).html(repoStars[i]);
     $("#repoDescription"+i).html(repoDescription[i]);
+    $(".projImg"+i).attr('src', repoImg[i]);
     }
   })
-
+/// https://raw.githubusercontent.com/Thebucket-ops/Bucksite/refs/heads/main/siteimage.png
 })
