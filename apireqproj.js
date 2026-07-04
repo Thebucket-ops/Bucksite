@@ -68,12 +68,14 @@ $.get(url, function(data) {
   let repoDescription= [];
   let repoLink= [];
   let repoStars = [];
+  let repoImg=[];
 
   for(let i= 0; i<sortedRepos.length;i++){
       repoName[i]= sortedRepos[i].name;
       repoDescription[i]= sortedRepos[i].description;
       repoLink[i]= sortedRepos[i].html_url;
       repoStars[i] = sortedRepos[i].stargazers_count;
+      repoImg[i]="https://raw.githubusercontent.com/Thebucket-ops/"+repoName[i]+"/refs/heads/main/siteimage.png"
       console.log(repoName);
     }
 
@@ -85,7 +87,7 @@ $.get(url, function(data) {
       var a = document.createElement("a");
       a.setAttribute("class", "repoLink"+i);
       a.setAttribute("href", repoLink[i]);
-      a.innerHTML='<div class="projectsel"><div id="projContent"><pre id="repoTitle'+i+'" class="pen"></pre></br><pre id="repoDescription'+i+'" class="projDesc"></pre></div><img class="projImg'+i+'" src="images/buck&buck/buck&buck.png" alt="proj img"></div>';
+      a.innerHTML='<div class="projectsel"><div id="projContent"><pre id="repoTitle'+i+'" class="pen"></pre></br><pre id="repoDescription'+i+'" class="projDesc"></pre></div><img class="projImg'+i+'" src="'+repoImg[i]+'" alt="proj img"></div>';
       document.getElementById("main").appendChild(a);
 
     }
