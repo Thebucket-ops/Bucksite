@@ -69,6 +69,10 @@ $.get(url, function(data) {
   let repoLink= [];
   let repoStars = [];
   let repoImg=[];
+  let postitcolors=['#c6ff2b','#4fda4f','#0c94ee','#f08040'];
+  let randomcolor=0;
+  var randomSign = () => Math.random() >= 0.5 ? 1 : -1;
+
 
   for(let i= 0; i<sortedRepos.length;i++){
       repoName[i]= sortedRepos[i].name;
@@ -87,7 +91,7 @@ $.get(url, function(data) {
       var a = document.createElement("a");
       a.setAttribute("class", "repoLink"+i);
       a.setAttribute("href", repoLink[i]);
-      a.innerHTML='<div class="projectsel"><div id="projContent"><pre id="repoTitle'+i+'" class="pen"></pre></br><pre id="repoDescription'+i+'" class="projDesc"></pre></div><img class="projImg'+i+'" src="'+repoImg[i]+'" alt="proj img"></div>';
+      a.innerHTML='<div class="projectsel" id="postit'+i+'"><div id="projContent"><pre id="repoTitle'+i+'" class="pen"></pre></br><pre id="repoDescription'+i+'" class="projDesc"></pre></div><img id="imageProj" class="projImg'+i+'" src="'+repoImg[i]+'" alt="proj img"></div>';
       document.getElementById("main").appendChild(a);
 
     }
@@ -97,9 +101,17 @@ $.get(url, function(data) {
 
   for (let i =0;i<sortedRepos.length;i++){
     $(".repoLink"+i).attr('href', repoLink[i]);
+   
     $("#repoTitle"+i).html(repoName[i]);
     $("#repoStars"+i).html(repoStars[i]);
     $("#repoDescription"+i).html(repoDescription[i]);
+
+    randomcolor = postitcolors[Math.floor(Math.random() * (postitcolors.length))];
+    console.log(randomcolor);
+
+    $("#postit"+i).css('background-color', randomcolor);
+    $("#postit"+i).css('rotate', ''+((randomSign)* Math.floor(Math.random()*90))+'deg');
+    
     }
   })
 

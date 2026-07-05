@@ -118,6 +118,8 @@ $.get(url, function(data) {
   let repoLink= [];
   let repoImg=[];
   let repoStars = [];
+  let postitcolors=['#c6ff2b','#4fda4f','#0c94ee','#f08040'];
+  let randomcolor=0;
 
   for(let i= 0; i<sortedRepos.length;i++){
       repoName[i]= sortedRepos[i].name;
@@ -138,7 +140,13 @@ $.get(url, function(data) {
     $("#repoStars"+i).html(repoStars[i]);
     $("#repoDescription"+i).html(repoDescription[i]);
     $(".projImg"+i).attr('src', repoImg[i]);
+    
+    randomcolor = postitcolors[Math.floor(Math.random() * (postitcolors.length))];
+    console.log(randomcolor)
+    $("#postit"+i).css('background-color', randomcolor);
     }
   })
 /// https://raw.githubusercontent.com/Thebucket-ops/Bucksite/refs/heads/main/siteimage.png
+
+
 })
