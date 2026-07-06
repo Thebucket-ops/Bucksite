@@ -4,7 +4,7 @@ let splashtext =["Made by Mary!","Eat lemons -Sun Tzu",
     "Banana.","NEVER GIVE UP","still too little splash texts",
     "go listen to Takanaka, hes a cool ass japanese guy!",
     "theres only 1 pacific rim film",
-    "insert splash text here","now with 300% more grammatical errors!","spdow","from Italy with fury"
+    "insert splash text here","now with 300% more grammatical errors!","spdow","from Italy with fury", "Rasberry Pi Pico my beloved"
 ];
 
 //need 68 sealion texts

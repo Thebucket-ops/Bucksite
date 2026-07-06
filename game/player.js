@@ -37,7 +37,7 @@ export class Player {
         if (key_space==1){
             this.vspeed=-this.jump;
         }
-        console.log(this.y);
+        // console.log(this.y);
         this.y+= this.vspeed;
 
         //Boundaries
