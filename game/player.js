@@ -1,3 +1,5 @@
+
+
 export class Player {
     constructor(game){
         this.game=game;
@@ -12,6 +14,7 @@ export class Player {
         this.gravity=1;
         this.jump=15;
         this.terminalVelocity=-20;
+        this.gameRestart=false;
     }
     update(key_up, key_down, key_left, key_right,
         key_e, key_space
@@ -34,10 +37,14 @@ export class Player {
 
         if (this.y>this.game.height-this.height)this.vspeed=0;
         }
-        if (key_space==1){
+        if (key_space==1 && !this.gameRestart){
             this.vspeed=-this.jump;
         }
-        // console.log(this.y);
+
+
+
+
+        console.log(this.y);
         this.y+= this.vspeed;
 
         //Boundaries
@@ -52,5 +59,10 @@ export class Player {
         context.fillRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image, 0, 0, this.width, this.height, 
             this.x, this.y, this.width, this.height);
+    }
+
+    defeat(){
+        
+        this.gameRestart=true;
     }
 };
