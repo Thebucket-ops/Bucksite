@@ -7,6 +7,7 @@ export class inputMaster{
         this.key_right=0;
         this.key_e=0;
         this.key_space=0;
+        
         window.addEventListener('keydown', e=> {
             if(e.key==='ArrowUp'||e.key==='w'||e.key==='W'){this.key_up=1};
             if(e.key==='ArrowDown'||e.key==='s'||e.key==='S'){this.key_down=1};

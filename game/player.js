@@ -13,38 +13,44 @@ export class Player {
         this.maxSpeed=5;
         this.gravity=1;
         this.jump=15;
-        this.terminalVelocity=-20;
+        this.terminalVelocity=20;
         this.gameRestart=false;
-    }
+        this.onGround=false;
+        this.onRail=false;
+    } 
     update(key_up, key_down, key_left, key_right,
-        key_e, key_space
+        key_e, key_space, check
     ){
         // movement
-        // this.x+= this.speed;
-        
 
-        // this.speed=(this.maxSpeed*key_right)-(this.maxSpeed*key_left);
-        
-        
-        if(this.vspeed>this.terminalVelocity){
-        this.vspeed+=this.gravity
-        
-        
-        
-        if(this.vspeed>(this.game.height-(this.y+this.height))){
+        if((this.vspeed<this.terminalVelocity) && ((!this.onGround && !this.onRail))){
+            this.vspeed+=this.gravity
+            console.log("g")
+        }
+
+        if( this.vspeed>(this.game.height-(this.y+this.height)) && !check){
             this.vspeed=(this.game.height-(this.y+this.height));    //avoids the player from clipping in ground
         }
 
-        if (this.y>this.game.height-this.height)this.vspeed=0;
+
+        if (this.y>=this.game.height-this.height){
+            this.onGround=true;
+            this.y=this.game.height-this.height;
+        }else{this.onGround=false;}
+
+       
+
+
+
+        // console.log(this.y);
+        if(this.onGround||this.onRail){
+            this.vspeed=0;
+            console.log("groundrail");
         }
         if (key_space==1 && !this.gameRestart){
             this.vspeed=-this.jump;
         }
 
-
-
-
-        console.log(this.y);
         this.y+= this.vspeed;
 
         //Boundaries
