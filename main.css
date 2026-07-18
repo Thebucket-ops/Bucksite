@@ -107,7 +107,6 @@ body{padding: 0; margin: 0;
     padding-bottom: 0; 
     margin-bottom: 0;
     overflow-x: hidden;
-
 }
 
 div{margin: 0px; padding: 0em;}
@@ -442,6 +441,7 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
 /*PROJECT PAGE RELATIVE CSS*/
 #projectsect{
     padding: 4vh;
+    padding-left: 6vw;
     display: flexbox;
     background-image:url(images/projects/cork-board.png);
     background-size: contain;
@@ -453,4 +453,24 @@ footer{background-color: darkgrey; height: 120px; margin-bottom: 0;
     font-family: monospace;
     font-size: larger;
     margin-bottom: 2vh;
+}
+
+
+
+#moreprojP{
+    
+    position: absolute;
+    left: -17vw;
+    background-color: #c6ff2b;
+    overflow: visible!important;
+}
+#moreprojnameP{
+    color: #000;
+    font-size: 3.5vh;
+    display: inline-block;
+    position: relative;
+    left: +11vw;
+    top: 17vh;
+    rotate: -90deg;
+    overflow:visible!important;
 }

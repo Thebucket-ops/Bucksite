@@ -47,10 +47,6 @@ document.getElementById("seal").onclick = function(){
 var url = "https://api.github.com/users/Thebucket-ops/repos?per_page=100";
 
 document.querySelector("select").addEventListener('change',$.get)
-
-$.get(url, function(data) {
-  console.log(document.querySelector("select").value);
-
   var sortType= 'stargazers_count';
   if (document.querySelector("select").value=='stars'){
    sortType='stargazers_count';
@@ -60,7 +56,12 @@ $.get(url, function(data) {
     sortType='created_at';
   }
 
-  var sortedRepos = data.sort((a,b) => parseFloat(b.sortType) - parseFloat(a.sortType));
+$.get(url, function(sortType) {
+  console.log(document.querySelector("select").value);
+
+
+
+  var sortedRepos = sortType.sort((a,b) => parseFloat(b) - parseFloat(a));
   console.log(sortedRepos);
 
 
@@ -69,7 +70,7 @@ $.get(url, function(data) {
   let repoLink= [];
   let repoStars = [];
   let repoImg=[];
-  let postitcolors=['#c6ff2b','#4fda4f','#0c94ee','#f08040'];
+  let postitcolors=['#c6ff2b','#4fda4f','#0c94ee','#f08040','#34b8da','#2dd649'];
   let randomcolor=0;
   var randomSign = () => Math.random() >= 0.5 ? 1 : -1;
 
